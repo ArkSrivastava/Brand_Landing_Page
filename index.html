@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Brand<span>Name</span></h1>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero parallax-scene">
+        <div class="hero-content parallax-layer" data-speed="0.5">
+            <h1 class="text-reveal split-text">Welcome to Our Platform</h1>
+            <p class="fade-in delay-300">Discover the best features and services we offer to enhance your experience.</p>
+            <div class="cta-buttons fade-in delay-500">
+                <a href="#features" class="btn primary-btn btn-3d">Explore Features</a>
+                <a href="#contact" class="btn secondary-btn btn-3d">Get Started</a>
+            </div>
+        </div>
+        <div class="hero-image tilt parallax-layer" data-speed="0.8">
+            <div class="tilt-inner">
+                <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="Modern Tech Platform Interface" class="shine" loading="eager">
+                <div class="card-shine"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2 class="fade-in">Our Amazing Features</h2>
+            <p class="fade-in delay-200">Explore the powerful features that make our platform stand out</p>
+        </div>
+        <div class="features-container stagger-container">
+            <div class="feature-card card-3d card-3d-advanced stagger-item">
+                <div class="feature-icon rotating">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Lightning Fast</h3>
+                <p>Experience blazing fast performance with our optimized platform.</p>
+                <div class="card-shine"></div>
+            </div>
+            <div class="feature-card card-3d card-3d-advanced stagger-item">
+                <div class="feature-icon pulse">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Secure & Reliable</h3>
+                <p>Your data is protected with enterprise-grade security measures.</p>
+                <div class="card-shine"></div>
+            </div>
+            <div class="feature-card card-3d card-3d-advanced stagger-item">
+                <div class="feature-icon">
+                    <i class="fas fa-sync-alt rotating"></i>
+                </div>
+                <h3>Always Updated</h3>
+                <p>Regular updates ensure you always have the latest features.</p>
+                <div class="card-shine"></div>
+            </div>
+            <div class="feature-card card-3d card-3d-advanced stagger-item">
+                <div class="feature-icon pulse">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Fully Responsive</h3>
+                <p>Works perfectly on all devices, from mobile to desktop.</p>
+                <div class="card-shine"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Parallax -->
+    <section id="about" class="about parallax-section">
+        <div class="parallax-bg" data-parallax="0.15"></div>
+        <div class="about-content">
+            <div class="about-text">
+                <h2 class="fade-in-left split-text">About Our Company</h2>
+                <p class="fade-in-left delay-200" data-parallax="0.05">We are a team of passionate individuals dedicated to creating innovative solutions that solve real-world problems. Our mission is to provide high-quality products that make a difference in people's lives.</p>
+                <p class="fade-in-left delay-400" data-parallax="0.08">Founded in 2020, we've grown rapidly and continue to expand our offerings while maintaining our commitment to excellence.</p>
+                <a href="#contact" class="btn primary-btn btn-3d fade-in-left delay-600">Join Our Journey</a>
+            </div>
+            <div class="about-image fade-in-right tilt">
+                <div class="tilt-inner">
+                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Our Team Collaboration" class="shine" loading="lazy">
+                    <div class="card-shine"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-header">
+            <h2 class="fade-in">What Our Clients Say</h2>
+            <p class="fade-in delay-200">Hear from people who have experienced our services</p>
+        </div>
+        <div class="testimonial-slider">
+            <div class="testimonial-slide">
+                <div class="testimonial-content card-3d card-3d-advanced">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"This platform has completely transformed how we operate. The features are intuitive and powerful, making our daily tasks much more efficient."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Sarah Johnson - Marketing Director" loading="lazy">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Marketing Director</p>
+                        </div>
+                    </div>
+                    <div class="card-shine"></div>
+                </div>
+            </div>
+            <div class="testimonial-slide">
+                <div class="testimonial-content card-3d card-3d-advanced">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"I've tried many similar services, but none compare to the quality and reliability I've experienced here. The customer support is also exceptional."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="Michael Chen - Tech Entrepreneur" loading="lazy">
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Tech Entrepreneur</p>
+                        </div>
+                    </div>
+                    <div class="card-shine"></div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact parallax-scene">
+        <div class="section-header">
+            <h2 class="fade-in split-text">Get In Touch</h2>
+            <p class="fade-in delay-200">Have questions? We'd love to hear from you!</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-form fade-in-left parallax-layer" data-speed="0.3">
+                <form id="contactForm" class="card-3d-advanced">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn btn-3d">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info fade-in-right parallax-layer" data-speed="0.5">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123, India Gate, Delhi</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+91 99XXXXXX44</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>contact@example.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-icon floating"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon floating"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon floating"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon floating"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Brand<span>Name</span></h2>
+                <p>Creating amazing experiences since 2020</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 BrandName. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top btn-3d" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="3d-effects.js"></script>
+</body>
+</html>

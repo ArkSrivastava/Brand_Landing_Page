@@ -1,0 +1,294 @@
+/* Advanced Animations and 3D Effects */
+:root {
+    --animation-timing: 0.6s;
+    --animation-easing: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --hover-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --rotate-timing: 0.8s;
+    --perspective: 1000px;
+    --text-spacing: 0.02em;
+    --word-spacing: 0.05em;
+}
+
+/* Enhanced Scroll Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity var(--animation-timing) var(--animation-easing),
+                transform var(--animation-timing) var(--animation-easing);
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity var(--animation-timing) var(--animation-easing),
+                transform var(--animation-timing) var(--animation-easing);
+}
+
+.fade-in-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity var(--animation-timing) var(--animation-easing),
+                transform var(--animation-timing) var(--animation-easing);
+}
+
+.fade-in-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity var(--animation-timing) var(--animation-easing),
+                transform var(--animation-timing) var(--animation-easing);
+}
+
+.scale-in.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Staggered animations for multiple elements */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--animation-timing) var(--animation-easing),
+                transform var(--animation-timing) var(--animation-easing);
+    transition-delay: 0s;
+}
+
+.stagger-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 3D Card Effects */
+.card-3d {
+    transition: var(--hover-transition);
+    transform-style: preserve-3d;
+    perspective: var(--perspective);
+}
+
+.card-3d:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.15);
+}
+
+/* 3D Button Effects */
+.btn-3d {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: var(--hover-transition);
+    transform: translateZ(0);
+}
+
+.btn-3d:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    border-radius: inherit;
+    transform: translateZ(-5px);
+    filter: blur(5px);
+    opacity: 0.5;
+    transition: var(--hover-transition);
+}
+
+.btn-3d:hover {
+    transform: translateY(-3px) translateZ(10px);
+}
+
+.btn-3d:hover:before {
+    transform: translateZ(-10px);
+    filter: blur(10px);
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Rotating Animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    animation: rotate var(--rotate-timing) linear infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Shine Effect */
+.shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    transform: rotate(30deg);
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+.shine:hover::after {
+    opacity: 1;
+    animation: shine 1.5s ease-in-out;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(30deg) translateX(-300%);
+    }
+    100% {
+        transform: rotate(30deg) translateX(300%);
+    }
+}
+
+/* 3D Flip Card */
+.flip-card {
+    perspective: var(--perspective);
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+/* Parallax Tilt Effect */
+.tilt {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: transform 0.1s;
+}
+
+.tilt-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.1s;
+}
+
+.tilt-inner > * {
+    transform-style: preserve-3d;
+}
+
+/* Text Reveal Animation */
+.text-reveal {
+    position: relative;
+    overflow: hidden;
+}
+
+.text-reveal span {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.text-reveal.show span {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Ensure split-text characters are properly spaced */
+.split-char {
+    margin-right: 0.01em;
+    margin-left: 0.01em;
+}
+
+/* Delay classes for staggered animations */
+.delay-100 { transition-delay: 0.1s !important; animation-delay: 0.1s !important; }
+.delay-200 { transition-delay: 0.2s !important; animation-delay: 0.2s !important; }
+.delay-300 { transition-delay: 0.3s !important; animation-delay: 0.3s !important; }
+.delay-400 { transition-delay: 0.4s !important; animation-delay: 0.4s !important; }
+.delay-500 { transition-delay: 0.5s !important; animation-delay: 0.5s !important; }
+.delay-600 { transition-delay: 0.6s !important; animation-delay: 0.6s !important; }
+.delay-700 { transition-delay: 0.7s !important; animation-delay: 0.7s !important; }
+.delay-800 { transition-delay: 0.8s !important; animation-delay: 0.8s !important; }
+.delay-900 { transition-delay: 0.9s !important; animation-delay: 0.9s !important; }
+.delay-1000 { transition-delay: 1s !important; animation-delay: 1s !important; }
+
+/* Card Shine Effect for 3D Cards */
+.card-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 3;
+}
